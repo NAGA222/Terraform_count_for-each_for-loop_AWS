@@ -40,6 +40,7 @@ variable "user_names" {
 output "iam_users" {
   value = [for name in var.user_names:name]
 }
+  
 variable "user_names" {
   description = "IAM usernames"
   type        = set(string)               #only set and map we need to use
